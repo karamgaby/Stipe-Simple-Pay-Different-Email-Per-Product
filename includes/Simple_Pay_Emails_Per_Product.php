@@ -3,8 +3,7 @@
 	/**
 	 * The file that defines the core plugin class
 	 *
-	 * A class definition that includes attributes and functions used across both the
-	 * public-facing side of the site and the admin area.
+	 * A class definition that includes attributes and functions used across the admin area.
 	 *
 	 * @link       https://gabykaram.com/
 	 * @since      1.0.0
@@ -16,8 +15,7 @@
 	/**
 	 * The core plugin class.
 	 *
-	 * This is used to define internationalization, admin-specific hooks, and
-	 * public-facing site hooks.
+	 * This is used to define internationalization and admin-specific hooks.
 	 *
 	 * Also maintains the unique identifier of this plugin as well as the current
 	 * version of the plugin.
@@ -61,8 +59,7 @@
 		 * Define the core functionality of the plugin.
 		 *
 		 * Set the plugin name and the plugin version that can be used throughout the plugin.
-		 * Load the dependencies, define the locale, and set the hooks for the admin area and
-		 * the public-facing side of the site.
+		 * Load the dependencies, define the locale, and set the hooks for the admin area of the site.
 		 *
 		 * @since    1.0.0
 		 */
@@ -77,7 +74,6 @@
 			$this->load_dependencies();
 			$this->set_locale();
 			$this->define_admin_hooks();
-			$this->define_public_hooks();
 			
 		}
 		
@@ -89,7 +85,6 @@
 		 * - Simple_Pay_Emails_Per_Product_Loader. Orchestrates the hooks of the plugin.
 		 * - Simple_Pay_Emails_Per_Product_i18n. Defines internationalization functionality.
 		 * - Simple_Pay_Emails_Per_Product_Admin. Defines all hooks for the admin area.
-		 * - Simple_Pay_Emails_Per_Product_Public. Defines all hooks for the public side of the site.
 		 *
 		 * Create an instance of the loader which will be used to register the hooks
 		 * with WordPress.
@@ -120,12 +115,6 @@
 			 * The class responsible for defining all actions that occur in the admin area.
 			 */
 			require_once plugin_dir_path( __DIR__ ) . 'admin/Simple_Pay_Emails_Per_Product_Admin.php';
-			
-			/**
-			 * The class responsible for defining all actions that occur in the public-facing
-			 * side of the site.
-			 */
-			require_once plugin_dir_path( __DIR__ ) . 'public/Simple_Pay_Emails_Per_Product_Public.php';
 			
 			$this->loader = new Simple_Pay_Emails_Per_Product_Loader();
 			
@@ -162,22 +151,6 @@
 			$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 			$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 			$this->loader->add_filter( 'simpay_before_payment_details', $plugin_admin, 'stripe_send_email', 10, 2 );
-			
-		}
-		
-		/**
-		 * Register all of the hooks related to the public-facing functionality
-		 * of the plugin.
-		 *
-		 * @since    1.0.0
-		 * @access   private
-		 */
-		private function define_public_hooks() {
-			
-			$plugin_public = new Simple_Pay_Emails_Per_Product_Public( $this->get_plugin_name(), $this->get_version() );
-			
-			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 			
 		}
 		
