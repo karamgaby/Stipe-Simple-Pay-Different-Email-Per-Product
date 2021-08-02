@@ -100,6 +100,11 @@
 		private function load_dependencies() {
 			
 			/**
+			 * The helpers functions for associated with this plugin.
+			 */
+			require_once plugin_dir_path( __DIR__ ) . 'includes/helpers.php';
+			
+			/**
 			 * The class responsible for orchestrating the actions and filters of the
 			 * core plugin.
 			 */

@@ -116,11 +116,3 @@
 			wp_mail( $customer_email, $email_subject, $email_content, '', [] );
 		}
 	}
-	
-	function accessProtected( $obj, $prop ) {
-		$reflection = new ReflectionClass( $obj );
-		$property   = $reflection->getProperty( $prop );
-		$property->setAccessible( true );
-		
-		return $property->getValue( $obj );
-	}
