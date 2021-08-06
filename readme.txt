@@ -13,7 +13,9 @@ Stipe Simple Pay Different Email Per Product is an extension of the Stripe Simpl
 
 Stipe Simple Pay Different Email Per Product is an extension of the Stripe Simple Pay plugin that allows having a different customer notification email for each product
 
-For the plugin to work correctly you would need to have [ACF](https://wordpress.org/plugins/advanced-custom-fields/) installed and activated
+For the plugin to work correctly you would need to have:
+ * [ACF](https://wordpress.org/plugins/advanced-custom-fields/) installed and activated
+ * [Stripe Payments WordPress Plugin – WP Simple Pay](https://wordpress.org/plugins/stripe/) installed and activated
 
 
 == Installation ==
