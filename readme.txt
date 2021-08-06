@@ -36,6 +36,9 @@ The easiest way to install Simple Pay Different Email Per Product is to search f
 
 Advanced Custom fields is a required plugin to be able to use this plugin.
 
+= Is Stripe Payments WordPress Plugin – WP Simple Pay required? =
+Stripe Payments WordPress Plugin – WP Simple Pay is a required plugin to be able to use this plugin
+
 == Screenshots ==
 
 1. Where to set the product email
