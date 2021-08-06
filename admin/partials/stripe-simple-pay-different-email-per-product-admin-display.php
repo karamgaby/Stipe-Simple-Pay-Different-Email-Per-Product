@@ -8,8 +8,8 @@
  * @link       https://gabykaram.com/
  * @since      1.0.0
  *
- * @package    Simple_Pay_Emails_Per_Product
- * @subpackage Simple_Pay_Emails_Per_Product/admin/partials
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+ * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/admin/partials
  */
 ?>
 

@@ -6,8 +6,8 @@
  * @link       https://gabykaram.com/
  * @since      1.0.0
  *
- * @package    Simple_Pay_Emails_Per_Product
- * @subpackage Simple_Pay_Emails_Per_Product/includes
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+ * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Simple_Pay_Emails_Per_Product
- * @subpackage Simple_Pay_Emails_Per_Product/includes
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+ * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
  * @author     Gaby Karam <gaby@wpshortcuts.studio>
  */
-class Simple_Pay_Emails_Per_Product_Loader {
+class Stripe_Simple_Pay_Different_Email_Per_Product_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

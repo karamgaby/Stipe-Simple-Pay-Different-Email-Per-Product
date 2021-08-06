@@ -6,8 +6,8 @@
 	 * @link       https://gabykaram.com/
 	 * @since      1.0.0
 	 *
-	 * @package    Simple_Pay_Emails_Per_Product
-	 * @subpackage Simple_Pay_Emails_Per_Product/admin
+	 * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+	 * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/admin
 	 */
 	
 	/**
@@ -16,11 +16,11 @@
 	 * Defines the plugin name, version, and two examples hooks for how to
 	 * enqueue the admin-specific stylesheet and JavaScript.
 	 *
-	 * @package    Simple_Pay_Emails_Per_Product
-	 * @subpackage Simple_Pay_Emails_Per_Product/admin
+	 * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+	 * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/admin
 	 * @author     Gaby Karam <gaby@wpshortcuts.studio>
 	 */
-	class Simple_Pay_Emails_Per_Product_Admin {
+	class Stripe_Simple_Pay_Different_Email_Per_Product_Admin {
 		
 		/**
 		 * The ID of this plugin.
@@ -68,10 +68,10 @@
 			 * This function is provided for demonstration purposes only.
 			 *
 			 * An instance of this class should be passed to the run() function
-			 * defined in Simple_Pay_Emails_Per_Product_Loader as all of the hooks are defined
+			 * defined in Stripe_Simple_Pay_Different_Email_Per_Product_Loader as all of the hooks are defined
 			 * in that particular class.
 			 *
-			 * The Simple_Pay_Emails_Per_Product_Loader will then create the relationship
+			 * The Stripe_Simple_Pay_Different_Email_Per_Product_Loader will then create the relationship
 			 * between the defined hooks and the functions defined in this
 			 * class.
 			 */
@@ -93,10 +93,10 @@
 			 * This function is provided for demonstration purposes only.
 			 *
 			 * An instance of this class should be passed to the run() function
-			 * defined in Simple_Pay_Emails_Per_Product_Loader as all of the hooks are defined
+			 * defined in Stripe_Simple_Pay_Different_Email_Per_Product_Loader as all of the hooks are defined
 			 * in that particular class.
 			 *
-			 * The Simple_Pay_Emails_Per_Product_Loader will then create the relationship
+			 * The Stripe_Simple_Pay_Different_Email_Per_Product_Loader will then create the relationship
 			 * between the defined hooks and the functions defined in this
 			 * class.
 			 */

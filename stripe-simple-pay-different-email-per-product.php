@@ -10,7 +10,7 @@
  *
  * @link              https://gabykaram.com/
  * @since             1.0.0
- * @package           Simple_Pay_Emails_Per_Product
+ * @package           Stripe_Simple_Pay_Different_Email_Per_Product
  *
  * @wordpress-plugin
  * Plugin Name:       Simple Pay Emails per product
@@ -35,34 +35,34 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'SIMPLE_PAY_EMAILS_PER_PRODUCT_VERSION', '1.0.0' );
+define( 'STRIPE_SIMPLE_PAY_DIFFERENT_EMAIL_PER_PRODUCT_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-simple-pay-emails-per-product-activator.php
  */
-function activate_simple_pay_emails_per_product() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/Simple_Pay_Emails_Per_Product_Activator.php';
-	Simple_Pay_Emails_Per_Product_Activator::activate();
+function activate_stripe_simple_pay_different_email_per_product() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/Stripe_Simple_Pay_Different_Email_Per_Product_Activator.php';
+	Stripe_Simple_Pay_Different_Email_Per_Product_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-simple-pay-emails-per-product-deactivator.php
  */
-function deactivate_simple_pay_emails_per_product() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/Simple_Pay_Emails_Per_Product_Deactivator.php';
-	Simple_Pay_Emails_Per_Product_Deactivator::deactivate();
+function deactivate_stripe_simple_pay_different_email_per_product() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/Stripe_Simple_Pay_Different_Email_Per_Product_Deactivator.php';
+	Stripe_Simple_Pay_Different_Email_Per_Product_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_simple_pay_emails_per_product' );
-register_deactivation_hook( __FILE__, 'deactivate_simple_pay_emails_per_product' );
+register_activation_hook( __FILE__, 'activate_stripe_simple_pay_different_email_per_product' );
+register_deactivation_hook( __FILE__, 'deactivate_stripe_simple_pay_different_email_per_product' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/Simple_Pay_Emails_Per_Product.php';
+require plugin_dir_path( __FILE__ ) . 'includes/Stripe_Simple_Pay_Different_Email_Per_Product.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,10 +73,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/Simple_Pay_Emails_Per_Product.ph
  *
  * @since    1.0.0
  */
-function run_simple_pay_emails_per_product() {
+function run_stripe_simple_pay_different_email_per_product() {
 
-	$plugin = new Simple_Pay_Emails_Per_Product();
+	$plugin = new Stripe_Simple_Pay_Different_Email_Per_Product();
 	$plugin->run();
 
 }
-run_simple_pay_emails_per_product();
+run_stripe_simple_pay_different_email_per_product();

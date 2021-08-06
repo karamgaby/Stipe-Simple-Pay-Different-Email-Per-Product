@@ -9,8 +9,8 @@
  * @link       https://gabykaram.com/
  * @since      1.0.0
  *
- * @package    Simple_Pay_Emails_Per_Product
- * @subpackage Simple_Pay_Emails_Per_Product/includes
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+ * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Simple_Pay_Emails_Per_Product
- * @subpackage Simple_Pay_Emails_Per_Product/includes
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+ * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
  * @author     Gaby Karam <gaby@wpshortcuts.studio>
  */
-class Simple_Pay_Emails_Per_Product_i18n {
+class Stripe_Simple_Pay_Different_Email_Per_Product_i18n {
 
 
 	/**

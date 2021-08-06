@@ -22,7 +22,7 @@
  * @link       https://gabykaram.com/
  * @since      1.0.0
  *
- * @package    Simple_Pay_Emails_Per_Product
+ * @package    Stripe_Simple_Pay_Different_Email_Per_Product
  */
 
 // If uninstall not called from WordPress, then exit.

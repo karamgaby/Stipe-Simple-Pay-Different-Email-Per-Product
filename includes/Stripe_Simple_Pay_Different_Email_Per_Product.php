@@ -8,8 +8,8 @@
 	 * @link       https://gabykaram.com/
 	 * @since      1.0.0
 	 *
-	 * @package    Simple_Pay_Emails_Per_Product
-	 * @subpackage Simple_Pay_Emails_Per_Product/includes
+	 * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+	 * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
 	 */
 	
 	/**
@@ -21,11 +21,11 @@
 	 * version of the plugin.
 	 *
 	 * @since      1.0.0
-	 * @package    Simple_Pay_Emails_Per_Product
-	 * @subpackage Simple_Pay_Emails_Per_Product/includes
+	 * @package    Stripe_Simple_Pay_Different_Email_Per_Product
+	 * @subpackage Stripe_Simple_Pay_Different_Email_Per_Product/includes
 	 * @author     Gaby Karam <gaby@wpshortcuts.studio>
 	 */
-	class Simple_Pay_Emails_Per_Product {
+	class Stripe_Simple_Pay_Different_Email_Per_Product {
 		
 		/**
 		 * The loader that's responsible for maintaining and registering all hooks that power
@@ -33,7 +33,7 @@
 		 *
 		 * @since    1.0.0
 		 * @access   protected
-		 * @var      Simple_Pay_Emails_Per_Product_Loader $loader Maintains and registers all hooks for the plugin.
+		 * @var      Stripe_Simple_Pay_Different_Email_Per_Product_Loader $loader Maintains and registers all hooks for the plugin.
 		 */
 		protected $loader;
 		
@@ -64,8 +64,8 @@
 		 * @since    1.0.0
 		 */
 		public function __construct() {
-			if ( defined( 'SIMPLE_PAY_EMAILS_PER_PRODUCT_VERSION' ) ) {
-				$this->version = SIMPLE_PAY_EMAILS_PER_PRODUCT_VERSION;
+			if ( defined( 'STRIPE_SIMPLE_PAY_DIFFERENT_EMAIL_PER_PRODUCT_VERSION' ) ) {
+				$this->version = STRIPE_SIMPLE_PAY_DIFFERENT_EMAIL_PER_PRODUCT_VERSION;
 			} else {
 				$this->version = '1.0.0';
 			}
@@ -82,9 +82,9 @@
 		 *
 		 * Include the following files that make up the plugin:
 		 *
-		 * - Simple_Pay_Emails_Per_Product_Loader. Orchestrates the hooks of the plugin.
-		 * - Simple_Pay_Emails_Per_Product_i18n. Defines internationalization functionality.
-		 * - Simple_Pay_Emails_Per_Product_Admin. Defines all hooks for the admin area.
+		 * - Stripe_Simple_Pay_Different_Email_Per_Product_Loader. Orchestrates the hooks of the plugin.
+		 * - Stripe_Simple_Pay_Different_Email_Per_Product_i18n. Defines internationalization functionality.
+		 * - Stripe_Simple_Pay_Different_Email_Per_Product_Admin. Defines all hooks for the admin area.
 		 *
 		 * Create an instance of the loader which will be used to register the hooks
 		 * with WordPress.
@@ -103,27 +103,27 @@
 			 * The class responsible for orchestrating the actions and filters of the
 			 * core plugin.
 			 */
-			require_once plugin_dir_path( __DIR__ ) . 'includes/Simple_Pay_Emails_Per_Product_Loader.php';
+			require_once plugin_dir_path( __DIR__ ) . 'includes/Stripe_Simple_Pay_Different_Email_Per_Product_Loader.php';
 			
 			/**
 			 * The class responsible for defining internationalization functionality
 			 * of the plugin.
 			 */
-			require_once plugin_dir_path( __DIR__ ) . 'includes/Simple_Pay_Emails_Per_Product_i18n.php';
+			require_once plugin_dir_path( __DIR__ ) . 'includes/Stripe_Simple_Pay_Different_Email_Per_Product_i18n.php';
 			
 			/**
 			 * The class responsible for defining all actions that occur in the admin area.
 			 */
-			require_once plugin_dir_path( __DIR__ ) . 'admin/Simple_Pay_Emails_Per_Product_Admin.php';
+			require_once plugin_dir_path( __DIR__ ) . 'admin/Stripe_Simple_Pay_Different_Email_Per_Product_Admin.php';
 			
-			$this->loader = new Simple_Pay_Emails_Per_Product_Loader();
+			$this->loader = new Stripe_Simple_Pay_Different_Email_Per_Product_Loader();
 			
 		}
 		
 		/**
 		 * Define the locale for this plugin for internationalization.
 		 *
-		 * Uses the Simple_Pay_Emails_Per_Product_i18n class in order to set the domain and to register the hook
+		 * Uses the Stripe_Simple_Pay_Different_Email_Per_Product_i18n class in order to set the domain and to register the hook
 		 * with WordPress.
 		 *
 		 * @since    1.0.0
@@ -131,7 +131,7 @@
 		 */
 		private function set_locale() {
 			
-			$plugin_i18n = new Simple_Pay_Emails_Per_Product_i18n();
+			$plugin_i18n = new Stripe_Simple_Pay_Different_Email_Per_Product_i18n();
 			
 			$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 			
@@ -146,7 +146,7 @@
 		 */
 		private function define_admin_hooks() {
 			
-			$plugin_admin = new Simple_Pay_Emails_Per_Product_Admin( $this->get_plugin_name(), $this->get_version() );
+			$plugin_admin = new Stripe_Simple_Pay_Different_Email_Per_Product_Admin( $this->get_plugin_name(), $this->get_version() );
 			
 			$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 			$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -177,7 +177,7 @@
 		/**
 		 * The reference to the class that orchestrates the hooks with the plugin.
 		 *
-		 * @return    Simple_Pay_Emails_Per_Product_Loader    Orchestrates the hooks of the plugin.
+		 * @return    Stripe_Simple_Pay_Different_Email_Per_Product_Loader    Orchestrates the hooks of the plugin.
 		 * @since     1.0.0
 		 */
 		public function get_loader() {
