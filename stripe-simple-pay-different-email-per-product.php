@@ -13,7 +13,7 @@
  * @package           Stripe_Simple_Pay_Different_Email_Per_Product
  *
  * @wordpress-plugin
- * Plugin Name:       Simple Pay Emails per product
+ * Plugin Name:       Stripe Simple Pay Different Email Per Product
  * Plugin URI:        https://wpshortcuts.studio/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
